@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/assigment.css"/>
+    <link rel="stylesheet" href="css/stylesm.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Ubuntu+Mono&display=swap" rel="stylesheet"/>
+    <script defer src="script/script.js"></script>
+    <script src="js/assigment.js"></script>
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"/>
+
+<title>Reviews</title>
+</head>
+<body>
+
+
+<header>
+    <nav class="nav1">
+      <div class="nav1-l">
+        <ul>
+          <li><a class="facebook"><i class="fa fa-facebook"></a></i></li>
+          <li><a class="twitter"><i class="fa fa-twitter"></a></i></li>
+          <li><a class="google"><i class="fa fa-google-plus"></a></i></li>
+          <li class="nav1-txt">Keep Your Way More Luxury</li>
+        </ul>
+      </div>
+      <div class="nav1-r">
+        <button data-modal-target="#modal" type="button" name="navi_btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg><i class="bi bi-list"></i></button>
+        <div class="modal" id="modal">
+          <div class="model-content">
+            <div class="sec-content-header">
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="sec-content-search">
+              <form class="example" action="action_page.php">
+                <input type="text" placeholder="Search.." name="search"/>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+            <div class="sec-content">
+              <div class="sec-clm1"><i class="fa fa-registered" aria-hidden="true"></i></div>
+              <div class="sec-clm2">Register</div>
+            </div>
+            <div class="sec-content">
+              <div class="sec-clm1"><i class="fa fa-sign-in" aria-hidden="true"></i></div>
+              <div class="sec-clm2">Login</div>
+            </div>
+            <div class="sec-content">
+              <div class="sec-clm1"><i class="fa fa-car" aria-hidden="true"></i></div>
+              <div class="sec-clm2">Rent My Car</div>
+            </div>
+            <div class="sec-content">
+              <div class="sec-clm1"><i class="fa fa-user" aria-hidden="true"></i></div>
+              <div class="sec-clm2">Drive With EasyTaxi</div>
+            </div>
+          </div>
+        </div>
+        <div id="overlay"></div>
+      </div>
+    </nav>
+
+    <div class="maindiv">
+      <div class="logo">
+        <img class="EasyTaxiLogo" src="images/EasyTaxiLogo.png" alt="EasyTaxiLogo"/>
+      </div>
+      <div class="nav2-r">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a>Vehical Fleet</a><button type="button" name="vFleet_btn"><i class="fa fa-angle-down" aria-hidden="true"></i></button></li>
+          <li><a>Packages</a><button type="button" name="vFleet_btn"><i class="fa fa-angle-down" aria-hidden="true"></i></button></li>
+          <li><a>Services</a></li>
+          <li><a>About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+<div class="container">
+      
+    <div class="row">
+        <div class="include2">  
+        <form method="post" action="<%=request.getContextPath() %>/myservlet">
+
+            
+            <center><h1><b>Reviews</b></h1></center><br/><br/>
+
+            <h4 style="color: #BDBDC2"><center><div class="rateyo" id= "rating" data-rateyo-rating="0" data-rateyo-num-stars="5" data-rateyo-score="3"></div>
+            <span class='result'>0</span></center></h4><br/>
+            <input type="hidden" name = "rating" id="rating" value="3"></input>
+
+            <h4 style="color: #000000">Write a review !</h4>
+           
+            <div class="form-outline">
+            <textarea id="form1" class="form" rows="4" cols="50" name="review" placeholder="Write your comment in here!"></textarea>
+            </div>
+
+    <input type="submit" name="add" class="login" value="Submit"/>
+    <input type="reset" name="reset" class="login"/>
+    <a href="selectReview.jsp"><input type="button" name="rev" class="login" value="view reviews"/></a><br/>
+    
+        </form>
+    </div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+<script>
+
+
+    $(function () {
+        $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
+            var rating = data.rating;
+            $(this).parent().find('.score').text('score :'+ $(this).attr('data-rateyo-score'));
+            $(this).parent().find('.result').text('rating :'+ rating);
+            $(this).parent().find('input[name=rating]').val(rating); //add rating value to input field
+        });
+    });
+
+</script>
+
+</body>
+</html>

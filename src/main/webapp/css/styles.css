@@ -1,0 +1,434 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 15vh;
+  background-color: gainsboro;
+  display: block;
+  position: fixed;
+  z-index: 999;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav1 {
+  background-color: rgb(49,120,235);
+  width: 100%;
+  height: 30px;
+  display: block;
+  color: white;
+  border-bottom: 2px solid whitesmoke;
+}
+
+.nav1-l {
+  float: left;
+  margin-left: 50px;
+  height: 28px;
+}
+
+.nav1-l ul {
+  list-style-type: none;
+  overflow: hidden;
+  cursor: default;
+}
+
+.nav1-l li{
+  display: inline-block;
+}
+
+.nav1-l ul li a{
+  text-align: center;
+  padding: 0px 5px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.facebook:hover {
+  color: #3b5998;
+}
+
+.twitter:hover {
+  color: #00acee;
+}
+
+.google:hover {
+  color: #db4a39;
+}
+
+.nav1-txt {
+  font-size: 14px;
+  padding-left: 20px;
+  cursor: default;
+}
+
+
+.nav1-r {
+  float: right;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.nav1-r button {
+  font-size: 22px;
+  color: white;
+  background-color: rgb(49,120,235);
+  border: 1px solid rgb(49,120,235);
+  cursor: pointer;
+}
+
+.nav1-r button:hover {
+  color: whitesmoke;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%) scaleX(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  z-index: 900;
+  width: 40%;
+  height: 100vh;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
+.model-content {
+  width: 50%;
+  float: left;
+  background-color: rgb(64,64,64);
+  height: 100vh;
+  display: block;
+}
+
+.sec-content-header {
+  width: 100%;
+  height: 40px;
+  padding: 0px 17px 0px 17px;
+}
+
+.close-button {
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+  float: right;
+}
+.sec-content-header button {
+    background-color: rgb(64,64,64);
+    border: 1px solid rgb(64,64,64);
+}
+
+form.example {
+  width: 80%;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  border-radius: 3px 0px 0px 3px;
+}
+
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: grey;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0px 3px 3px 0px;
+}
+
+form.example button:hover {
+  background: rgb(112, 112, 112);
+  color: white;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.sec-content {
+  width: 80%;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  color: grey;
+  border-bottom: 2px solid grey;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.sec-clm1 {
+  height: 5px;
+  width: 25px;
+  text-align: center;
+  display: inline-block;
+  padding: 25px 5px 15px 2px;
+  cursor: pointer;
+}
+
+.sec-clm2 {
+  height: 5px;
+  display: inline-block;
+  padding: 25px 5px 15px 2px;
+  cursor: pointer;
+}
+
+.sec-content:hover {
+  color: gainsboro;
+  border-bottom: 2px solid gainsboro;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  z-index: 800;
+  pointer-events: all;
+}
+
+.maindiv {
+  width: 100%;
+  height: 80px;
+  display: block;
+  background-color: gainsboro;
+}
+
+.logo {
+  display: inline-block;
+  float: left;
+}
+
+.EasyTaxiLogo {
+  width: 150px;
+  vertical-align: middle;
+  margin-left: 80px;
+}
+
+.nav2-r {
+  float: right;
+  padding-top: 20px;
+}
+
+.nav2-r ul {
+  list-style-type: none;
+  overflow: hidden;
+  cursor: default;
+  float: right;
+}
+
+.nav2-r ul li{
+  display: inline-block;
+  padding: 0px 40px;
+  position: relative;
+  list-style: none;
+}
+
+.nav2-r ul li a{
+  display: block;
+  font-family: 'Ubuntu Mono', monospace;
+  color: rgb(64,64,64);
+  text-align: center;
+  font-size:22px;
+  cursor: pointer;
+  line-height: 40px;
+}
+
+.nav2-r ul ul {
+  display: block;
+  background-color: gainsboro;
+  opacity: 0.9;
+  display: none;
+  position: fixed;
+}
+
+.nav2-r ul li:hover > ul {
+  display: block;
+}
+
+.nav2-r ul ul li {
+  width: 174px;
+  float: none;
+  display: block;
+  position: relative;
+  padding: 0px 5px;
+}
+
+.nav2-r ul ul li a:hover {
+  color: grey;
+}
+
+.nav2-r span {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav2-r span i {
+  display: block;
+}
+
+.viewport-img {
+  background-image: url(../images/Viewport/img1.jpg);
+  border-top: 2px solid rgb(64,64,64);
+  width: 100%;
+  opacity: 0.9;
+  min-height: 800px;
+  height: 100vh;
+  display: block;
+}
+
+.block1 {
+  width: 100%;
+  height: 15vh;
+  display: block;
+}
+.block2 {
+  height: 85vh;
+  width: 100%;
+}
+
+.block2-content {
+  float: right;
+  width: 350px;
+  margin-top: 75px;
+  margin-right: 125px;
+  height: 500px;
+  background-color: gainsboro;
+}
+
+.block2-header {
+  width : 100%;
+  text-align: center;
+  padding: 10px 0px;
+  display: block;
+  background-color: red;
+}
+
+.block2-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+
+}
+
+.location {
+  background-color: rgb(64,64,64);
+  height: 88vh;
+  display: block;
+}
+
+.location-header {
+  display: block;
+  text-align: center;
+}
+
+.location H2 {
+  margin-top: 30PX;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: gainsboro;
+  font-family: 'Righteous', cursive;
+  border-bottom: 5px solid crimson;
+  display: inline-block;
+  padding: 2px;
+}
+
+
+.contactus {
+  background-color: whitesmoke;
+  height: 88vh;
+  display: block;
+}
+
+@media (max-width: 1300px){
+  .modal {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1250px) {
+
+  .nav1-l {
+    margin-left: 25px;
+    height: 28px;
+  }
+
+  .nav1-l ul li a{
+    font-size: 18px;
+  }
+
+  .nav1-txt {
+    padding-left: 15px;
+  }
+
+  .modal {
+    width: 50%;
+  }
+
+  .EasyTaxiLogo {
+    width: 140px;
+    margin-left: 60px;
+  }
+
+  .nav2-r li{
+    padding: 0px 25px;
+  }
+
+  .nav2-r ul li a{
+    font-size:20px;
+  }
+
+  .nav2-r button {
+    font-size: 20px;
+    margin-left: 8px;
+  }
+
+  .nav2-r ul ul li {
+    width: 155px;
+  }
+}
